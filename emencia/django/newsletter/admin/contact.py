@@ -144,8 +144,8 @@ class ContactAdmin(admin.ModelAdmin):
                         self.list_display_links, self.list_filter,
                         self.date_hierarchy, self.search_fields,
                         self.list_select_related, self.list_per_page,
-                        self.list_editable, self.list_max_show_all, self)
-        return cl.get_query_set(request)
+                        self.list_editable, self)
+        return cl.get_query_set()
 
     def creation_mailinglist(self, request):
         """Create a mailing list form the filtered contacts"""
